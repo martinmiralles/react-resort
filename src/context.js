@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import items from "./data";
+// import Client from "./Contentful";
 
 const RoomContext = React.createContext();
 // <RoomContext.Provider value = {}
@@ -42,7 +43,7 @@ class RoomProvider extends Component {
     // console.log(rooms);
   }
 
-  formatData(item) {
+  formatData(items) {
     let tempItems = items.map(item => {
       let id = item.sys.id;
       let images = item.fields.images.map(image => image.fields.file.url);
